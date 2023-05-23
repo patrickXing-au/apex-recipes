@@ -31,7 +31,9 @@ public with sharing class ApexClassUtilities {
                 'Failed to extract group name. Class name: ' + klass.Name
             );
         }
-
+        if (groupName.trim()==':') {
+            return 'Local Apex Classes';
+        }
         return groupName;
     }
 
